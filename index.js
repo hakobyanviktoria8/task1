@@ -1,5 +1,6 @@
 let id = 1
 let img = document.getElementById("img")
+let title = document.querySelector("h1")
 let main = document.querySelector(".main")
 img.src = `images/img${id}.jpg`;
 
@@ -14,6 +15,8 @@ const nextFunc = () => {
 }
 
 // write style inside javaScript
+title.style.textAlign= "center"
+
 img.style.width = "90%"
 img.style.height = "600px"
 
