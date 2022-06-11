@@ -9,6 +9,7 @@ img.src = `images/img${id}.jpg`;
 // for style
 let titleStyle = title.style
 let imgStyle = img.style
+imgStyle.transition = "opacity 5s linear";
 let mainStyle = main.style
 let prevButtonStyle = prevButton.style
 let nextButtonStyle = nextButton.style
@@ -21,14 +22,17 @@ const prevFunc = () => {
 
 const nextFunc = () => {
     id >= 6 ? id = 1 : id++
+    // img.style.opacity = 0
     img.src = `images/img${id}.jpg`;
+    img.style.opacity = 1
 }
 
 // write style inside javaScript
 titleStyle.textAlign= "center"
 
-imgStyle.width = "80%"
-imgStyle.height = "600px"
+imgStyle.width = "100%"
+imgStyle.opacity = 0
+// imgStyle.height = "600px"
 
 mainStyle.display = "flex"
 mainStyle.justifyContent ="center"
